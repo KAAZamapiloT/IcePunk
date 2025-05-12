@@ -6,7 +6,16 @@
 #include "Components/ActorComponent.h"
 #include "AC_HealthComponent.generated.h"
 
-
+USTRUCT()
+struct FAC_Health
+{
+	GENERATED_USTRUCT_BODY()
+double Health;
+double Armour;
+double MaxHealth;
+double MaxArmour;
+	
+};
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class ICEPUNK_API UAC_HealthComponent : public UActorComponent
 {
@@ -24,4 +33,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
 	                           FActorComponentTickFunction* ThisTickFunction) override;
+	
+
+		
+	
 };
