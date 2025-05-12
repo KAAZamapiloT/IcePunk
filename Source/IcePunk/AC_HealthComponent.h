@@ -6,16 +6,34 @@
 #include "Components/ActorComponent.h"
 #include "AC_HealthComponent.generated.h"
 
-USTRUCT()
+UENUM()
+enum EHealthEffect
+{
+	EHS_Invincible
+};
+
+USTRUCT(BlueprintType)
 struct FAC_Health
 {
-	GENERATED_USTRUCT_BODY()
-double Health;
-double Armour;
-double MaxHealth;
-double MaxArmour;
-	
+    GENERATED_USTRUCT_BODY()
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+    double Health;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+    double Armour;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+    double MaxHealth;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+    double MaxArmour;
+    
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
+   TArray<EHealthEffect>CurrentEffect;
 };
+
+
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
 class ICEPUNK_API UAC_HealthComponent : public UActorComponent
 {
