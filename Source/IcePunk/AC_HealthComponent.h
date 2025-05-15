@@ -6,11 +6,8 @@
 #include "Components/ActorComponent.h"
 #include "AC_HealthComponent.generated.h"
 
-UENUM()
-enum EHealthEffect
-{
-	EHS_Invincible
-};
+
+
 
 USTRUCT(BlueprintType)
 struct FAC_Health
@@ -28,9 +25,7 @@ struct FAC_Health
     
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
     double MaxArmour;
-    
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
-   TArray<EHealthEffect>CurrentEffect;
+	
 };
 
 
