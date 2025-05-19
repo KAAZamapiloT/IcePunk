@@ -52,6 +52,7 @@ void UThermalComponent::UpdateThermalState(float DeltaTime)
 
 void UThermalComponent::HandleFreezingState()
 {
+	
 }
 
 void UThermalComponent::HandleOverheatingState()

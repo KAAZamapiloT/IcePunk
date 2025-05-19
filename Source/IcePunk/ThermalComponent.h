@@ -6,7 +6,7 @@
 #include "ThermalComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class YOURGAME_API UThermalComponent : public UActorComponent
+class ICEPUNK_API UThermalComponent : public UActorComponent
 {
     GENERATED_BODY()
 
