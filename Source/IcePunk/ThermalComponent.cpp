@@ -40,6 +40,7 @@ void UThermalComponent::ApplyEnvironmentalEffects(float EnvironmentTemp)
 
 void UThermalComponent::AdjustThermalLevel(float Amount)
 {
+	ThermalLevel=Amount;
 }
 
 void UThermalComponent::DebugSetTemp(float NewTemp)
@@ -57,5 +58,6 @@ void UThermalComponent::HandleFreezingState()
 
 void UThermalComponent::HandleOverheatingState()
 {
+	
 }
 
